@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}Blog de Carros{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Carros Encontrados</h1>
+        <div class="card-grid">
+
+           {% for carro in carros %}
+            <div class="card">
+                <img src="{{ carro.foto.url }}" alt="{{ carro.nome }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ carro.nome }}</h5>
+                    <table>
+                        <tr>
+                            <th>Marca</th>
+                            <td>{{ carro.marca}}</td>
+                        </tr>
+                        <tr>
+                            <th>Ano</th>
+                            <td>{{ carro.ano }}</td>
+                        </tr>
+                    </table>
+                    <p><strong>Valor:</strong> US$ {{ carro.valor }}</p>
+                    <p><strong>Descrição: </strong>{{ carro.descrição }}</p>
+                </div>
+            </div>
+            {% empty %}
+                <p>Nenhum carro encontrado com essa marca.</p>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

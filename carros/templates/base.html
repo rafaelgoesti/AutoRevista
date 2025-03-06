@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+    <title>{% block title %}Blog de Carros{% endblock %}</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="{% url 'home' %}" class="logo">AutoRevista</a>
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <span class="hamburger"></span>
+            </button>
+            <div class="navbar-links">
+                <form class="search-form" method="get" action="{% url 'buscar_marca' %}">
+                    <input type="search" name="search" placeholder="Buscar..." aria-label="Search">
+                    <button type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="carousel">
+        <div class="carousel-inner">
+            {% for foto in carousel %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                    <img src="{{ foto.foto.url }}" alt="Carro {{ forloop.counter }}">
+                    <div class="carousel-caption">
+                        <h5>{{ foto.nome }}</h5>
+                        <p>{{ foto.descrcao }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+            
+        </div>
+        <button class="carousel-control prev" aria-label="Slide anterior">&#10094;</button>
+        <button class="carousel-control next" aria-label="Próximo slide">&#10095;</button>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Blog de Carros. Todos os direitos reservados.</p>
+            <ul>
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="#">Termos de Uso</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
