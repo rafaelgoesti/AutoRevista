@@ -2,16 +2,16 @@
 
 ## 📌 Introdução
 
-O AutoRevista é um projeto web desenvolvido para simplificar o gerenciamento e a busca por informações sobre carros. Nosso objetivo é fornecer uma plataforma intuitiva e completa para entusiastas, compradores e vendedores de automóveis. Com ele, é possível cadastrar carros, realizar buscas detalhadas e filtrar informações relevantes, tudo em um só lugar. Resolvemos a dificuldade de encontrar informações centralizadas e organizadas sobre diversos modelos de carros.
+O **AutoRevista** é um projeto Django para cadastrar, visualizar e buscar carros de diferentes marcas, com uma interface de usuário simples e intuitiva. O sistema permite que os usuários pesquisem por carros através da marca, e exibe informações detalhadas como nome, marca, ano, valor e descrição dos carros.
 
 ## ⚡ Recursos e Funcionalidades
 
 O AutoRevista oferece uma variedade de funcionalidades para otimizar sua experiência:
 
 *   **Cadastro de Carros:** Permite adicionar novos veículos ao sistema com detalhes como marca, modelo, ano, preço e especificações técnicas.
-    *   *Exemplo:* Um usuário pode cadastrar um "Volkswagen Gol 2020" com informações detalhadas e fotos.
+    *   *Exemplo:* Um usuário pode cadastrar um "Lamborghini Revuelto 2024" com informações detalhadas e fotos.
 *   **Busca e Filtro:** Facilita a localização de carros específicos com base em diversos critérios, como marca, modelo, ano e faixa de preço.
-    *   *Exemplo:* Um usuário pode buscar por carros da marca "Ford" fabricados entre 2015 e 2020, com preço abaixo de R$50.000.
+    *   *Exemplo:* Um usuário pode buscar por carros da marca "BMW" fabricados entre 2015 e 2025, com preço abaixo de R$100.000.
 *   **Interface de Usuário:** Design intuitivo e responsivo, garantindo uma experiência agradável em dispositivos desktop e mobile.
     *   *Exemplo:* A navegação é simples e direta, com menus claros e botões de fácil acesso.
 *   **Estrutura do Projeto:** Organização clara dos arquivos e pastas para facilitar a manutenção e expansão do projeto.
@@ -23,12 +23,11 @@ O AutoRevista oferece uma variedade de funcionalidades para otimizar sua experi�
     *   Comparativo entre modelos de carros.
     *   Integração com serviços de venda de carros online.
 
-## ✅ Tecnologias Utilizadas
+## 🚀 Tecnologias Utilizadas
 
-*   ✅ **Django:** Framework web Python de alto nível que incentiva o desenvolvimento rápido e um design limpo e pragmático. Escolhemos Django para o backend devido à sua segurança, escalabilidade e vasta gama de funcionalidades prontas.
-*   ✅ **HTML:** Linguagem de marcação utilizada para estruturar o conteúdo das páginas web. Usamos HTML para criar a estrutura básica das páginas do AutoRevista.
-*   ✅ **CSS:** Linguagem de estilo utilizada para definir a aparência visual das páginas web. Utilizamos CSS para estilizar a interface do AutoRevista, tornando-a atraente e responsiva.
-*   ✅ **JavaScript:** Linguagem de programação utilizada para adicionar interatividade e dinamismo às páginas web. Utilizamos JavaScript para implementar funcionalidades como validação de formulários e manipulação do DOM.
+- **Django**: Framework web para o backend.
+- **HTML/CSS**: Para a construção da interface do usuário.
+- **SQLite**: Banco de dados utilizado para armazenar os dados dos carros.
 
 ## ⚙️ Pré-requisitos e Instalação
 
@@ -37,7 +36,7 @@ Antes de começar, certifique-se de ter o Python instalado (versão 3.6 ou super
 1.  **Clone o repositório:**
 
     ```bash
-    git clone <URL_DO_REPOSITORIO>
+    git clone https://github.com/rafaelgoesti/AutoRevista.git
     cd AutoRevista
     ```
 
@@ -78,9 +77,19 @@ Antes de começar, certifique-se de ter o Python instalado (versão 3.6 ou super
 ## 🚀 Como usar
 
 1.  **Acesse a página inicial:** Navegue até `http://localhost:8000` para visualizar a página inicial do AutoRevista.
-2.  **Cadastro de carros:** Clique no link "Cadastrar Carro" para acessar o formulário de cadastro. Preencha os campos com as informações do carro e envie o formulário.
+2.  **Cadastro de carros:** Clique no link `http://localhost:8000/admin` para acessar o formulário de cadastro. Preencha os campos com as informações do carro e envie o formulário.
 3.  **Busca e filtro:** Utilize a barra de busca ou os filtros disponíveis para encontrar carros específicos. Você pode filtrar por marca, modelo, ano, preço, etc.
 4.  **Painel de administração:** Acesse `http://localhost:8000/admin` para gerenciar os carros cadastrados, usuários e outras configurações do sistema. Utilize as credenciais do superusuário criado durante a instalação.
+
+## 📸 Capturas de Tela
+
+### Tela Inicial do Site
+
+![Tela Inicial do Site](AutoRevista/image.png)
+
+### Painel Administrativo
+
+![Painel Administrativo](AutoRevista/image copy.png)
 
 ## 📚 Exemplos de código
 
@@ -97,7 +106,7 @@ class Carro(models.Model):
 
     def __str__(self):
         return f"{self.marca} {self.modelo} ({self.ano})"
-```
+
 
 **Exemplo de visualização Django (views.py):**
 
