@@ -85,11 +85,11 @@ Antes de começar, certifique-se de ter o Python instalado (versão 3.6 ou super
 
 ### Tela Inicial do Site
 
-![Tela Inicial do Site](AutoRevista/image.png)
+![Tela Inicial do Site](/image.png)
 
 ### Painel Administrativo
 
-![Painel Administrativo](AutoRevista/image copy.png)
+![Painel Administrativo](/image%20copy.png)
 
 ## 📚 Exemplos de código
 
