@@ -1,4 +1,5 @@
 # 🚗 AutoRevista
+![Tela Inicial do Site](/image.png)
 
 ## 📌 Introdução
 
@@ -81,11 +82,6 @@ Antes de começar, certifique-se de ter o Python instalado (versão 3.6 ou super
 3.  **Busca e filtro:** Utilize a barra de busca ou os filtros disponíveis para encontrar carros específicos. Você pode filtrar por marca, modelo, ano, preço, etc.
 4.  **Painel de administração:** Acesse `http://localhost:8000/admin` para gerenciar os carros cadastrados, usuários e outras configurações do sistema. Utilize as credenciais do superusuário criado durante a instalação.
 
-## 📸 Capturas de Tela
-
-### Tela Inicial do Site
-
-![Tela Inicial do Site](/image.png)
 
 ### Painel Administrativo
 
